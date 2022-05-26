@@ -101,12 +101,13 @@ a {
 .block-link a {
     color: #494949;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 0;
     transition: 0.1s ease;
+    background-color: cyan;
 }
 
 #container-tabela {
@@ -146,6 +147,25 @@ table caption {
     background-color: #ccc;
     color: #fff;
 }
+
+.question {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+  }
+  
+  .question input,
+  .question .answer { display: none }
+  
+  .question label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%
+  }
+  
+  .question input:checked ~ .answer {
+    display: block
+  }
 
 @media (max-width: 768px){
     .block {
