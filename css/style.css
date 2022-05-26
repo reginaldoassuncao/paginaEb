@@ -106,8 +106,9 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 0;
+    border-radius: 20px;
     transition: 0.1s ease;
-    background-color: cyan;
+    background-color: aquamarine;
 }
 
 #container-tabela {
@@ -133,7 +134,7 @@ table, th, td {
     font-size: 11px;
 }
 
-td, th, tr {
+td, th, tr {    
     padding: 5px;
 }
 
@@ -141,6 +142,10 @@ table caption {
     padding: 8px;
     margin: 0 auto 30px;
 
+}
+
+tr:nth-of-type(2n+1) {
+    background-color: #eee;
 }
 
 .block-link a:hover {
