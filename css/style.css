@@ -151,13 +151,39 @@ table caption {
 
 }
 
-tr:nth-of-type(2n+1) {
+thead {
+    background: #6592c9;
+}
+
+tbody tr:nth-of-type(odd) {
     background-color: #eee;
 }
 
 .block-link a:hover {
     background-color: #ccc;
     color: #fff;
+}
+
+#procedimentos{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.procedimetos-pdf {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.titulo-faq{
+    text-align: center;
+    color: #3b7863;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0px;
 }
 
 .question {
