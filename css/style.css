@@ -1,22 +1,24 @@
-* { box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  color: #3d3d3d;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #3d3d3d;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
 }
 
 .container {
     max-width: 1024px;
-  }
-  
-  .topo { 
+}
+
+.topo {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #d5d5d5;
-  }
+}
 
 .topo a:hover {
     color: green;
@@ -32,6 +34,7 @@ body {
     padding: 0 10px;
     margin: 0 auto;
 }
+
 .tamanho-maximo-container {
     max-width: 1024px;
     margin: 0 auto;
@@ -55,7 +58,7 @@ body {
     color: #3d3d3d;
 }
 
-.link-topo {
+.link-topo, .link-topo-procedimentos {
     text-transform: uppercase;
     line-height: 18px;
     text-decoration: none;
@@ -164,7 +167,7 @@ tbody tr:nth-of-type(odd) {
     color: #fff;
 }
 
-#procedimentos{
+#procedimentos {
     width: 100%;
     text-align: center;
     font-weight: bold;
@@ -179,11 +182,24 @@ tbody tr:nth-of-type(odd) {
 }
 
 
-.titulo-faq{
+.titulo-faq {
     text-align: center;
     color: #3b7863;
     font-family: Arial, Helvetica, sans-serif;
     margin: 40px 0px;
+}
+
+.titulo-formulario {
+    text-align: center;
+    color: #3b7863;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0px;
+}
+
+.formulario p {
+    margin: 20px 0 0 0;
+    line-height: 30px;
+    font-family: sans-serif;
 }
 
 .question {
@@ -209,12 +225,46 @@ tbody tr:nth-of-type(odd) {
 
 .question label:hover {
     color: green;
-    cursor: pointer;
+    cursor: help;
 
 }
 
 .question input:checked~.answer {
     display: block
+}
+
+/*Caixa de sugestões*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 430px;
+    margin: 30px auto;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+    margin: 30px 0 25px 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button {
+    background: #6592c9;
+    border: none;
+    height: 32px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .rodape-copyright {
@@ -224,13 +274,13 @@ tbody tr:nth-of-type(odd) {
     color: black;
     font-weight: 600;
     width: 100%;
-  }
-  
-  .rodape {
+}
+
+.rodape {
     background-color: aquamarine;
-    color:#fff;
-  }  
-  
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .block {
         width: calc(100%/2 - 20px);
@@ -251,10 +301,29 @@ tbody tr:nth-of-type(odd) {
     .block-img {
         height: calc((100vw - 20px) /2);
     }
+
+    .container-procedimentos {
+        display: none;
+    }
+
+    .link-topo-procedimentos {
+        display: none;
+    }
+
+    .container-links-topo {
+        display: flex;
+        padding-top: 13px;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
 }
 
 
-@media (max-width: 320px) {  
+@media (max-width: 320px) {
 
     .block {
         width: calc(100%);
@@ -263,7 +332,23 @@ tbody tr:nth-of-type(odd) {
 
     .block-img {
         height: calc(100vw /2);
+    }   
+
+    .container-procedimentos {
+        display: none;
     }
 
-}
+    .link-topo-procedimentos {
+        display: none;
+    }
 
+    .container-links-topo {
+        display: flex;
+        padding-top: 13px;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
